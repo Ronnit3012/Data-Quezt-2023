@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
-const DashboardCard1 = () => {
+const DashboardCard5 = () => {
   return (
-    <Link to='/analytics/average-ratio'> 
+    <Link to='/analytics/classification-of-drg'> 
     <div className="bg-white shadow-lg rounded-lg border border-slate-200">
         <div className="px-5 py-5">
-            Average Ratio
+            Classification of DRG
         </div>
     </div>
     </Link>
   )
 }
 
-export default DashboardCard1;
+export default DashboardCard5

@@ -21,6 +21,11 @@ import DashboardCard12 from "../partials/dashboard/DashboardCard12";
 import DashboardCard13 from "../partials/dashboard/DashboardCard13";
 // import Banner from '../partials/Banner';
 import DashboardCard1 from "../partials/dashboard/DashboardCard1";
+import DashboardCard2 from "../partials/dashboard/DashboardCard2";
+import DashboardCard3 from "../partials/dashboard/DashboardCard3";
+import DashboardCard4 from "../partials/dashboard/DashboardCard4";
+import DashboardCard5 from "../partials/dashboard/DashboardCard5";
+import DashboardCard6 from "../partials/dashboard/DashboardCard6";
 
 function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -35,11 +40,11 @@ function Dashboard() {
             <div className="grid grid-rows-3 grid-flow-col gap-6">
               {/* Line chart (Acme Plus) */}
               <DashboardCard1 />
-              <DashboardCard1 />
-              <DashboardCard1 />
-              <DashboardCard1 />
-              <DashboardCard1 />
-              <DashboardCard1 />
+              <DashboardCard2 />
+              <DashboardCard3 />
+              <DashboardCard4 />
+              <DashboardCard5 />
+              <DashboardCard6 />
               {/* Line chart (Acme Advanced) */}
               {/* <DashboardCard02 /> */}
               {/* Line chart (Acme Professional) */}
