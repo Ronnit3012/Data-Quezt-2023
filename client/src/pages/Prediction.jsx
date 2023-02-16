@@ -9,8 +9,14 @@ const Prediction = () => {
   const[result, setResult] = useState(null);
 
   const handleSubmit = async () => {
+    const obj = {
+        discharges,
+        covered,
+        total,
+        medicare,
+    }
     try {
-        const response = await axios.post('http://localhost:8000/process_form');
+        const response = await axios.post('http://localhost:8000/process_form', obj);
 
         console.log(response);
     } catch (error) {
@@ -27,29 +33,29 @@ const Prediction = () => {
                     <div className="flex flex-wrap -mx-3 mb-3">
                         <div className="w-full px-3">
                             <label htmlFor="discharges" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">No. of Discharges</label>
-                            <input type="number" id="discharges" name="discharges" onChange={(e) => setDischarges(e.target.value)} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" placeholder="" required></input>
+                            <input type="number" id="discharges" name="discharges" onChange={(e) => setDischarges(e.target.value)} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" step={0.01} placeholder="" required></input>
                         </div>
                     </div>
                     <div className="flex flex-wrap -mx-3 mb-3">
                         <div className="w-full px-3">
                             <label htmlFor="covered" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Average Covered Charge</label>
-                            <input type="number" id="covered" name="covered" onChange={(e) => setCovered(e.target.value)} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" placeholder="" required></input>
+                            <input type="number" id="covered" name="covered" onChange={(e) => setCovered(e.target.value)} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" step={0.01} placeholder="" required></input>
                         </div>
                     </div>
                     <div className="flex flex-wrap -mx-3 mb-3">
                         <div className="w-full px-3">
                             <label htmlFor="total" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Average Total Payment</label>
-                            <input type="number" id="total" name="total" onChange={(e) => setTotal(e.target.value)} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" placeholder="" required></input>
+                            <input type="number" id="total" name="total" onChange={(e) => setTotal(e.target.value)} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" placeholder="" step={0.01} required></input>
                         </div>
                     </div>
                     <div className="flex flex-wrap -mx-3 mb-3">
                         <div className="w-full px-3">
                             <label htmlFor="medicare" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Average Medicare Payment</label>
-                            <input type="number" id="medicare" name="medicare" onChange={(e) => setMedicare(e.target.value)} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" placeholder="" required></input>
+                            <input type="number" id="medicare" name="medicare" onChange={(e) => setMedicare(e.target.value)} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" placeholder="" step={0.01} required></input>
                         </div>
                     </div>
                     <div className="flex justify-center item-center">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onClick={handleSubmit} type="button">
+                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onClick={handleSubmit} type="button">
                             Submit
                         </button>
                     </div>
