@@ -18,6 +18,7 @@ import PaymentAndDischarge from './pages/PaymentAndDischarge'
 import MedicarePayments from './pages/MedicarePayments';
 import ClassificationOfDRG from './pages/ClassificationOfDRG';
 import BoxPLot from './pages/BoxPlot';
+import Prediction from './pages/Prediction';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
         <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
           {/*  Site header */}
           <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+          <div className="h-full">
 
           <Routes>
             <Route exact path="/" element={<Dashboard />} />
@@ -48,7 +50,9 @@ function App() {
             <Route path="/analytics/medicare-payment" element={<MedicarePayments />} />
             <Route path="/analytics/classification-of-drg" element={<ClassificationOfDRG />} />
             <Route path="/analytics/boxplot" element={<BoxPLot />} />
+            <Route path="/prediction" element={<Prediction />} />
           </Routes>
+          </div>
         </div>
       </div>
     </>
