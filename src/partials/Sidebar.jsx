@@ -155,7 +155,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                   return (
                     <React.Fragment>
                       <a
-                        href="#0"
+                        href=""
                         className={`block text-slate-200 truncate transition duration-150 ${
                           pathname === "/" || pathname.includes("dashboard")
                             ? "hover:text-slate-200"
@@ -253,7 +253,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                   return (
                     <React.Fragment>
                       <a
-                        href="#0"
+                        href="/"
                         className={`block text-slate-200 truncate transition duration-150 ${
                           pathname.includes("tasks")
                             ? "hover:text-slate-200"
@@ -316,43 +316,11 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                       </a>
                       <div className="lg:hidden lg:sidebar-expanded:block 2xl:block">
                         <ul className={`pl-9 mt-1 ${!open && "hidden"}`}>
-                          
+                          {/* Average Ratio */}
                           <li className="mb-1 last:mb-0">
                             <NavLink
                               end
-                              to="/dashboard/paysanddischarges"
-                              className={({ isActive }) =>
-                                "block transition duration-150 truncate " +
-                                (isActive
-                                  ? "text-indigo-500"
-                                  : "text-slate-400 hover:text-slate-200")
-                              }
-                            >
-                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                                Payment and Discharge
-                              </span>
-                            </NavLink>
-                          </li>
-                          <li className="mb-1 last:mb-0">
-                            <NavLink
-                              end
-                              to="/dashboard/medicarepays"
-                              className={({ isActive }) =>
-                                "block transition duration-150 truncate " +
-                                (isActive
-                                  ? "text-indigo-500"
-                                  : "text-slate-400 hover:text-slate-200")
-                              }
-                            >
-                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                                Medicare payments
-                              </span>
-                            </NavLink>
-                          </li>
-                          <li className="mb-1 last:mb-0">
-                            <NavLink
-                              end
-                              to="/dashboard/averageratio"
+                              to="/analytics/average-ratio"
                               className={({ isActive }) =>
                                 "block transition duration-150 truncate " +
                                 (isActive
@@ -365,26 +333,11 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                               </span>
                             </NavLink>
                           </li>
+                          {/* Percentage Insured */}
                           <li className="mb-1 last:mb-0">
                             <NavLink
                               end
-                              to="/dashboard/classificationofdrug"
-                              className={({ isActive }) =>
-                                "block transition duration-150 truncate " +
-                                (isActive
-                                  ? "text-indigo-500"
-                                  : "text-slate-400 hover:text-slate-200")
-                              }
-                            >
-                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                                Classification of Drug
-                              </span>
-                            </NavLink>
-                          </li>
-                          <li className="mb-1 last:mb-0">
-                            <NavLink
-                              end
-                              to="/dashboard/paysanddischarges"
+                              to="/analytics/percentage-insured"
                               className={({ isActive }) =>
                                 "block transition duration-150 truncate " +
                                 (isActive
@@ -400,7 +353,55 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                           <li className="mb-1 last:mb-0">
                             <NavLink
                               end
-                              to="/dashboard/boxplot"
+                              to="/analytics/payment-and-discharge"
+                              className={({ isActive }) =>
+                                "block transition duration-150 truncate " +
+                                (isActive
+                                  ? "text-indigo-500"
+                                  : "text-slate-400 hover:text-slate-200")
+                              }
+                            >
+                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                                Payment and Discharge
+                              </span>
+                            </NavLink>
+                          </li>
+                          <li className="mb-1 last:mb-0">
+                            <NavLink
+                              end
+                              to="/analytics/medicare-payment"
+                              className={({ isActive }) =>
+                                "block transition duration-150 truncate " +
+                                (isActive
+                                  ? "text-indigo-500"
+                                  : "text-slate-400 hover:text-slate-200")
+                              }
+                            >
+                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                                Medicare payments
+                              </span>
+                            </NavLink>
+                          </li>
+                          <li className="mb-1 last:mb-0">
+                            <NavLink
+                              end
+                              to="/analytics/classification-of-drg"
+                              className={({ isActive }) =>
+                                "block transition duration-150 truncate " +
+                                (isActive
+                                  ? "text-indigo-500"
+                                  : "text-slate-400 hover:text-slate-200")
+                              }
+                            >
+                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                                Classification of DRG
+                              </span>
+                            </NavLink>
+                          </li>
+                          <li className="mb-1 last:mb-0">
+                            <NavLink
+                              end
+                              to="/analytics/boxplot"
                               className={({ isActive }) =>
                                 "block transition duration-150 truncate " +
                                 (isActive
@@ -428,7 +429,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
               >
                 <NavLink
                   end
-                  to="/visualization"
+                  to="/prediction"
                   className={`block text-slate-200 truncate transition duration-150 ${
                     pathname.includes("inbox")
                       ? "hover:text-slate-200"
@@ -455,7 +456,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                       />
                     </svg>
                     <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                      Visualization
+                      Prediction
                     </span>
                   </div>
                 </NavLink>
@@ -486,7 +487,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                   return (
                     <React.Fragment>
                       <a
-                        href="#0"
+                        href=""
                         className={`block text-slate-200 truncate transition duration-150 ${
                           open ? "hover:text-slate-200" : "hover:text-white"
                         }`}
