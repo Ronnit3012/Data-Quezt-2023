@@ -61,7 +61,7 @@ function Help() {
         >
           <div className="text-xs font-semibold text-slate-400 uppercase pt-1.5 pb-2 px-4">Need help?</div>
           <ul>
-            <li>
+            {/* <li>
               <Link
                 className="font-medium text-sm text-indigo-500 hover:text-indigo-600 flex items-center py-1 px-3"
                 to="#0"
@@ -73,7 +73,7 @@ function Help() {
                 </svg>
                 <span>Documentation</span>
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 className="font-medium text-sm text-indigo-500 hover:text-indigo-600 flex items-center py-1 px-3"
