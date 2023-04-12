@@ -7,8 +7,13 @@ const Prediction = () => {
   const [total, setTotal] = useState(null);
   const [medicare, setMedicare] = useState(null);
   const[result, setResult] = useState(null);
+  const [error, setError] = useState(null)
 
   const handleSubmit = async () => {
+    if(!discharges || !covered || !total || !medicare){
+        setError("Please fill all the fields");
+        return;
+    }
     const obj = {
         discharges,
         covered,
@@ -25,8 +30,9 @@ const Prediction = () => {
 
         console.log(response);
         setResult(response.data.result);
+        setError(null);
     } catch (error) {
-        setResult('Something went wrong!');
+        setError('Something went wrong!');
     }
   }
 
@@ -34,6 +40,7 @@ const Prediction = () => {
     <>
         <p className='ml-10 my-3 font-bold text-2xl'>Prediction</p>
         {result && <p className='ml-10 my-3 font-bold'>{result} % Chances of people buying Insurance in this area</p>}
+        {error && <p className='ml-10 my-3 font-bold'>{error}</p>}
         <div className='flex justify-center items-center'>
             <div className="bg-white shadow-lg rounded-lg border border-slate-200 p-10">
                 <form className="w-[400px] max-w-xl">
