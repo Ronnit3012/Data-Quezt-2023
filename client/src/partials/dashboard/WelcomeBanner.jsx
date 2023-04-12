@@ -6,7 +6,7 @@ function WelcomeBanner() {
 
       {/* Background illustration */}
       <div className="absolute right-0 top-0 -mt-4 mr-16 pointer-events-none hidden xl:block" aria-hidden="true">
-        <svg width="319" height="198" xmlnsXlink="http://www.w3.org/1999/xlink">
+        <svg width="319" height="198" txmlnsXlink="http://www.w3.org/1999/xlink">
           <defs>
             <path id="welcome-a" d="M64 0l64 128-64-20-64 20z" />
             <path id="welcome-e" d="M40 0l40 80-40-12.5L0 80z" />
@@ -48,7 +48,7 @@ function WelcomeBanner() {
 
       {/* Content */}
       <div className="relative">
-        <h1 className="text-2xl md:text-3xl text-slate-800 font-bold mb-1">Good afternoon, Ronnit Mirgh. 👋</h1>
+        <h1 className="text-2xl md:text-3xl text-slate-800 font-bold mb-1">Good afternoon 👋</h1>
         <p>Here is what's happening with your analytics today:</p>
       </div>
 

@@ -15,10 +15,16 @@ const Prediction = () => {
         total,
         medicare,
     }
+    console.log(obj);
     try {
-        const response = await axios.post('http://localhost:8000/process_form', obj);
+        const response = await axios.post('http://localhost:8000/process_form/', obj, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
 
         console.log(response);
+        setResult(response.data.result);
     } catch (error) {
         setResult('Something went wrong!');
     }
@@ -27,6 +33,7 @@ const Prediction = () => {
   return (
     <>
         <p className='ml-10 my-3 font-bold text-2xl'>Prediction</p>
+        {result && <p className='ml-10 my-3 font-bold'>{result} % Chances of people buying Insurance in this area</p>}
         <div className='flex justify-center items-center'>
             <div className="bg-white shadow-lg rounded-lg border border-slate-200 p-10">
                 <form className="w-[400px] max-w-xl">

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h1>This is my homepage</h1>
+
+<form action="{% url 'result' %}">
+
+	{% csrf_token %}
+
+	Discharges: <input type="number" required name="discharges" step="0.01"><br><br>
+	Covered Charges: <input type="number" required name="covered" step="0.01"><br><br>
+	Total Payments: <input type="number" required name="total" step="0.01"><br><br>
+	Medicare Payments: <input type="number" required name="medicare" step="0.01"><br><br>
+	<input type="submit" value="submit">
+</form>
+
+</body>
+</html>
