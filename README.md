@@ -27,7 +27,7 @@ npm install
 ```
 Run the frontend development server.
 ```bash
-npm start
+npm run dev
 ```
 Open a new terminal window/tab and change directory to the backend folder.
 ```bash
