@@ -52,14 +52,16 @@ python manage.py runserver
 Screenshots of Website
 ![image](https://user-images.githubusercontent.com/80092848/232133157-6a1f78d8-b5e4-43e9-a75a-db93956b3868.png)
 Analysis:
-![image](https://user-images.githubusercontent.com/80092848/232133701-d3c16479-01f5-418a-91c6-fc2afae65819.png)
-![image](https://user-images.githubusercontent.com/80092848/232133793-f5990d63-7b92-4962-b388-eef3aeb1f21d.png)
-![image](https://user-images.githubusercontent.com/80092848/232133853-37a65b5b-1320-4288-9b2f-5bee2d7819b2.png)
-![image](https://user-images.githubusercontent.com/80092848/232133934-23d0a571-2a4f-4172-822c-de2ddf1f702c.png)
-![image](https://user-images.githubusercontent.com/80092848/232134011-7f67c43b-f5dd-445f-a1d4-be701d1a90fc.png)
-![image](https://user-images.githubusercontent.com/80092848/232134108-2d073250-082a-4b1a-8f2d-6c913c003048.png)
+![image](https://user-images.githubusercontent.com/80092848/232134522-d529676e-4ac9-49b9-9dff-6c7c4bb4c106.png)
+![image](https://user-images.githubusercontent.com/80092848/232134577-3286af9f-e58d-49cc-b3f9-87ce3fbf7db6.png)
+![image](https://user-images.githubusercontent.com/80092848/232134632-05e22a2c-06eb-4c4e-bc65-ce215cf53749.png)
+![image](https://user-images.githubusercontent.com/80092848/232134717-bc83b134-2be1-4c4c-9fef-bc58031bce94.png)
+![image](https://user-images.githubusercontent.com/80092848/232134858-803ca8ec-ad28-415c-b34a-dde2a881c09b.png)
+![image](https://user-images.githubusercontent.com/80092848/232134938-fb3f7598-34b2-4f03-a157-e22194e3fda6.png)
+
 Prediction:
-![image](https://user-images.githubusercontent.com/80092848/232134179-5e238fdd-2aeb-4536-a143-ea363b3d7646.png)
+![image](https://user-images.githubusercontent.com/80092848/232135009-a93780c7-7bf2-4d47-95b5-433547c68b7f.png)
+
 
 
 
