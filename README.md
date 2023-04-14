@@ -15,7 +15,7 @@ Pipenv: https://pipenv.pypa.io/
 Clone the repository to your local machine.
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Ronnit3012/Data-Quezt-2023.git
 ```
 Change directory to the frontend folder.
 ```bash
