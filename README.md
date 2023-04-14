@@ -19,7 +19,7 @@ git clone <repository-url>
 ```
 Change directory to the frontend folder.
 ```bash
-cd frontend
+cd client
 ```
 Install dependencies for the frontend.
 ```bash
@@ -27,7 +27,7 @@ npm install
 ```
 Run the frontend development server.
 ```bash
-npm run dev
+npm start
 ```
 Open a new terminal window/tab and change directory to the backend folder.
 ```bash
