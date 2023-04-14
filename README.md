@@ -19,7 +19,7 @@ git clone <repository-url>
 ```
 Change directory to the frontend folder.
 ```bash
-cd frontend
+cd client
 ```
 Install dependencies for the frontend.
 ```bash
